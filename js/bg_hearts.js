@@ -3,8 +3,8 @@ document.body.insertBefore(brd, document.getElementById("board"));
 
 const duration = 3000;
 const speed = 0.5;
-const cursorXOffset = 400;
-const cursorYOffset = 400;
+const cursorXOffset = 500;
+const cursorYOffset = 500;
 
 var hearts = [];
 
