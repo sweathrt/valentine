@@ -31,11 +31,11 @@ body {
     border: 2px solid white;
     height: 800px;
     width: 800px;
-    z-index: 99999;
+    z-index: 1;
 }
 
 p {
-    font-family: Consolas, monospace, sans-serif;
+    font-family: Consolas, 'Helvetica Neue', monospace, sans-serif;
     font-size: 15pt;
     margin: 0 1rem;
     -webkit-user-select: none; /* Safari */        

@@ -8,6 +8,15 @@ const slider =document.querySelector('#love-slider').addEventListener("change", 
     }
 });
 
+function switchScript() {
+    var heart_visibility = document.getElementById("heart-canvas").style.visibility;
+    if (heart_visibility === "hidden") {
+        heart_visibility = "visible";
+    } else {
+        heart_visibility = "hidden";
+    }
+}
+
 const ctx = document.getElementById("heart-canvas").getContext("2d");
 
 const WIDTH = HEIGHT = 800;
