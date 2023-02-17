@@ -9,7 +9,7 @@
 }
 
 .heart {
-    z-index: -1;
+    z-index: 0;
     animation: heartfade 6s linear;
     position: absolute;
 }
