@@ -21,6 +21,7 @@ body {
     justify-content: center; /* vertical align, because of flex-direction: column */
     width: 90%;
     max-width: 800px;
+    margin: auto;
 }
 
 .congrats-container {
