@@ -3,8 +3,8 @@ document.body.insertBefore(brd, document.getElementById("board"));
 
 const duration = 3000;
 const speed = 0.5;
-const cursorXOffset = 500;
-const cursorYOffset = 500;
+const cursorXOffset = 0;
+const cursorYOffset = 0;
 
 var hearts = [];
 
@@ -84,6 +84,6 @@ function check() {
         var start = 1 - Math.round(Math.random()) * 2;
         var scale = Math.random() * Math.random() * 0.8 + 0.2;
         var bound = 30 + Math.random() * 20;
-        generateHeart(event.pageX - brd.offsetLeft + cursorXOffset, event.pageY - brd.offsetTop + cursorYOffset, bound, start, scale);
+        generateHeart(event.pageX /*- brd.offsetLeft + cursorXOffset*/, event.pageY /*- brd.offsetTop + cursorYOffset*/, bound, start, scale);
     }
 }

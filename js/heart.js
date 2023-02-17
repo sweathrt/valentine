@@ -1,23 +1,16 @@
-const slider =document.querySelector('#love-slider').addEventListener("change", (e) => {
+const slider = document.getElementById("love-slider").addEventListener("change", (e) => {
     if (e.target.checked) {
-        document.querySelector('#heart-canvas').style.visibility = "visible";
-        document.querySelector('#congrats-container').style.visibility = "hidden";
+        document.querySelector(".animation").style.visibility = "visible";
+        document.querySelector(".text").style.visibility = "hidden";
     } else {
-        document.querySelector('#heart-canvas').style.visibility = "hidden";
-        document.querySelector('#congrats-container').style.visibility = "visible";
+        document.querySelector(".animation").style.visibility = "hidden";
+        document.querySelector(".text").style.visibility = "visible";
     }
 });
 
-function switchScript() {
-    var heart_visibility = document.getElementById("heart-canvas").style.visibility;
-    if (heart_visibility === "hidden") {
-        heart_visibility = "visible";
-    } else {
-        heart_visibility = "hidden";
-    }
-}
-
-const ctx = document.getElementById("heart-canvas").getContext("2d");
+const canvas = document.querySelector(".animation canvas");
+const ctx = canvas.getContext("2d");
+// var canvasInfo = canvas.getBoundingClientRect();
 
 const WIDTH = HEIGHT = 800;
 const x_offset = WIDTH / 2;
@@ -35,10 +28,14 @@ for (let row = 0; row < zBuffer.length; row++) {
 // charBuffer array, stores characters to output
 var charBuffer = new Array(rows)
 for (let row = 0; row < charBuffer.length; row++) {
-  charBuffer[row] = new Array(cols).fill(' ');
+charBuffer[row] = new Array(cols).fill(' ');
 }
 
 var theta = 0;
+
+function init() {
+    
+}
 
 function draw() {
     ctx.fillStyle = "black";
@@ -76,7 +73,7 @@ function draw() {
 
     charBuffer.forEach((row, y) => {
         row.forEach((col, x) => {
-            ctx.font="bold 17px Consolas"
+            ctx.font="bold 17px sans-serif"
             ctx.fillStyle = `rgb(237, 41, 57)`;
             ctx.fillText(charBuffer[y][x], x * ch_width, (y + 3) * ch_height);
 
